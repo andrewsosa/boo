@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields, pre_load, validate
+from marshmallow import Schema, fields, post_load, validate
 from .db import db, ma
 
 
@@ -10,6 +10,7 @@ class Task(db.Model):
     def __init__(self, name: str):
         self.name = name
 
-    class Schema(ma.Schema):
-        id = fields.Integer(dump_only=True)
-        name = fields.String(required=True)
+
+class TaskSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    name = fields.String(required=True)

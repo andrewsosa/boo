@@ -5,4 +5,4 @@ from . import resources
 api_blueprint = Blueprint("api", __name__)
 api = Api(api_blueprint)
 
-api.add_resource(resources.Task, "/task")
+api.add_resource(resources.Task, "/task", "/task/<int:task_id>")
