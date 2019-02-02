@@ -4,9 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "===18.9b0"
 pylint = "*"
-black = "*"
+pytest = "*"
+pytest-flask-sqlalchemy = "*"
 python-dotenv = "===0.10.1"
+tavern = "*"
 
 [packages]
 flask = "*"
@@ -17,9 +20,6 @@ marshmallow-sqlalchemy = "*"
 flask-migrate = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
-
-[requires]
-python_version = "3.6"
 
 [pipenv]
 allow_prereleases = true
