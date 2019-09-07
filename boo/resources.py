@@ -44,4 +44,4 @@ class Task(Resource):
     def post(self) -> Response:
         jsn = request.get_json(force=True)
         task = TaskController.load(jsn)
-        return self.schema.dump(task), 210
+        return self.schema.dump(task), 201

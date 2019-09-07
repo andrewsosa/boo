@@ -1,0 +1,20 @@
+---
+# Every test file has one or more tests...
+test_name: Create a task and read it back
+
+# ...and each test has one or more stages (e.g. an HTTP request)
+stages:
+  - name: Push a task
+
+    # Define the request to be made...
+    request:
+      url: http://localhost:5000/api/task
+      method: POST
+      json:
+        name: "A task!"
+
+    # ...and the expected response code and body
+    response:
+      status_code: 201
+      body:
+        name: "A task!"
